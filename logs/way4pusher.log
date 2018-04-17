@@ -1,0 +1,156 @@
+2018-02-25 21:25:19 ERROR ConsumerJob:59 - Can't start consuming
+java.io.IOException
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:126)
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:122)
+	at com.rabbitmq.client.impl.ChannelN.basicConsume(ChannelN.java:1363)
+	at com.rabbitmq.client.impl.recovery.AutorecoveringChannel.basicConsume(AutorecoveringChannel.java:540)
+	at com.rabbitmq.client.impl.recovery.AutorecoveringChannel.basicConsume(AutorecoveringChannel.java:494)
+	at com.rabbitmq.client.impl.recovery.AutorecoveringChannel.basicConsume(AutorecoveringChannel.java:472)
+	at ru.cubesolutions.evam.way4pusheraction.ConsumerJob.start(ConsumerJob.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'way4queuetest' in vhost 'evam', class-id=60, method-id=20)
+	at com.rabbitmq.utility.ValueOrException.getValue(ValueOrException.java:66)
+	at com.rabbitmq.utility.BlockingValueOrException.uninterruptibleGetValue(BlockingValueOrException.java:36)
+	at com.rabbitmq.client.impl.AMQChannel$BlockingRpcContinuation.getReply(AMQChannel.java:494)
+	at com.rabbitmq.client.impl.ChannelN.basicConsume(ChannelN.java:1357)
+	... 7 more
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'way4queuetest' in vhost 'evam', class-id=60, method-id=20)
+	at com.rabbitmq.client.impl.ChannelN.asyncShutdown(ChannelN.java:504)
+	at com.rabbitmq.client.impl.ChannelN.processAsync(ChannelN.java:346)
+	at com.rabbitmq.client.impl.AMQChannel.handleCompleteInboundCommand(AMQChannel.java:178)
+	at com.rabbitmq.client.impl.AMQChannel.handleFrame(AMQChannel.java:111)
+	at com.rabbitmq.client.impl.AMQConnection.readFrame(AMQConnection.java:643)
+	at com.rabbitmq.client.impl.AMQConnection.access$300(AMQConnection.java:47)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:581)
+	... 1 more
+2018-02-25 21:25:23 ERROR ConsumerJob:70 - Can't stop consuming
+java.io.IOException: Unknown consumerTag
+	at com.rabbitmq.client.impl.ChannelN.basicCancel(ChannelN.java:1455)
+	at com.rabbitmq.client.impl.recovery.AutorecoveringChannel.basicCancel(AutorecoveringChannel.java:650)
+	at ru.cubesolutions.evam.way4pusheraction.ConsumerJob.stop(ConsumerJob.java:66)
+	at ru.cubesolutions.evam.way4pusheraction.Way4Pusher.taskPushOneFile(Way4Pusher.java:28)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-02-25 21:25:34 ERROR ConsumerJob:59 - Can't start consuming
+java.io.IOException
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:126)
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:122)
+	at com.rabbitmq.client.impl.ChannelN.basicConsume(ChannelN.java:1363)
+	at com.rabbitmq.client.impl.recovery.AutorecoveringChannel.basicConsume(AutorecoveringChannel.java:540)
+	at com.rabbitmq.client.impl.recovery.AutorecoveringChannel.basicConsume(AutorecoveringChannel.java:494)
+	at com.rabbitmq.client.impl.recovery.AutorecoveringChannel.basicConsume(AutorecoveringChannel.java:472)
+	at ru.cubesolutions.evam.way4pusheraction.ConsumerJob.start(ConsumerJob.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'way4queuetest' in vhost 'evam', class-id=60, method-id=20)
+	at com.rabbitmq.utility.ValueOrException.getValue(ValueOrException.java:66)
+	at com.rabbitmq.utility.BlockingValueOrException.uninterruptibleGetValue(BlockingValueOrException.java:36)
+	at com.rabbitmq.client.impl.AMQChannel$BlockingRpcContinuation.getReply(AMQChannel.java:494)
+	at com.rabbitmq.client.impl.ChannelN.basicConsume(ChannelN.java:1357)
+	... 7 more
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'way4queuetest' in vhost 'evam', class-id=60, method-id=20)
+	at com.rabbitmq.client.impl.ChannelN.asyncShutdown(ChannelN.java:504)
+	at com.rabbitmq.client.impl.ChannelN.processAsync(ChannelN.java:346)
+	at com.rabbitmq.client.impl.AMQChannel.handleCompleteInboundCommand(AMQChannel.java:178)
+	at com.rabbitmq.client.impl.AMQChannel.handleFrame(AMQChannel.java:111)
+	at com.rabbitmq.client.impl.AMQConnection.readFrame(AMQConnection.java:643)
+	at com.rabbitmq.client.impl.AMQConnection.access$300(AMQConnection.java:47)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:581)
+	... 1 more
+2018-02-25 21:25:54 ERROR ConsumerJob:59 - Can't start consuming
+java.io.IOException
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:126)
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:122)
+	at com.rabbitmq.client.impl.ChannelN.basicConsume(ChannelN.java:1363)
+	at com.rabbitmq.client.impl.recovery.AutorecoveringChannel.basicConsume(AutorecoveringChannel.java:540)
+	at com.rabbitmq.client.impl.recovery.AutorecoveringChannel.basicConsume(AutorecoveringChannel.java:494)
+	at com.rabbitmq.client.impl.recovery.AutorecoveringChannel.basicConsume(AutorecoveringChannel.java:472)
+	at ru.cubesolutions.evam.way4pusheraction.ConsumerJob.start(ConsumerJob.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'way4queuetest' in vhost 'evam', class-id=60, method-id=20)
+	at com.rabbitmq.utility.ValueOrException.getValue(ValueOrException.java:66)
+	at com.rabbitmq.utility.BlockingValueOrException.uninterruptibleGetValue(BlockingValueOrException.java:36)
+	at com.rabbitmq.client.impl.AMQChannel$BlockingRpcContinuation.getReply(AMQChannel.java:494)
+	at com.rabbitmq.client.impl.ChannelN.basicConsume(ChannelN.java:1357)
+	... 7 more
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'way4queuetest' in vhost 'evam', class-id=60, method-id=20)
+	at com.rabbitmq.client.impl.ChannelN.asyncShutdown(ChannelN.java:504)
+	at com.rabbitmq.client.impl.ChannelN.processAsync(ChannelN.java:346)
+	at com.rabbitmq.client.impl.AMQChannel.handleCompleteInboundCommand(AMQChannel.java:178)
+	at com.rabbitmq.client.impl.AMQChannel.handleFrame(AMQChannel.java:111)
+	at com.rabbitmq.client.impl.AMQConnection.readFrame(AMQConnection.java:643)
+	at com.rabbitmq.client.impl.AMQConnection.access$300(AMQConnection.java:47)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:581)
+	... 1 more
+2018-02-25 21:26:52 ERROR ConsumerJob:59 - Can't start consuming
+java.io.IOException
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:126)
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:122)
+	at com.rabbitmq.client.impl.ChannelN.basicConsume(ChannelN.java:1363)
+	at com.rabbitmq.client.impl.recovery.AutorecoveringChannel.basicConsume(AutorecoveringChannel.java:540)
+	at com.rabbitmq.client.impl.recovery.AutorecoveringChannel.basicConsume(AutorecoveringChannel.java:494)
+	at com.rabbitmq.client.impl.recovery.AutorecoveringChannel.basicConsume(AutorecoveringChannel.java:472)
+	at ru.cubesolutions.evam.way4pusheraction.ConsumerJob.start(ConsumerJob.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'way4queuetest' in vhost 'evam', class-id=60, method-id=20)
+	at com.rabbitmq.utility.ValueOrException.getValue(ValueOrException.java:66)
+	at com.rabbitmq.utility.BlockingValueOrException.uninterruptibleGetValue(BlockingValueOrException.java:36)
+	at com.rabbitmq.client.impl.AMQChannel$BlockingRpcContinuation.getReply(AMQChannel.java:494)
+	at com.rabbitmq.client.impl.ChannelN.basicConsume(ChannelN.java:1357)
+	... 7 more
+Caused by: com.rabbitmq.client.ShutdownSignalException: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no queue 'way4queuetest' in vhost 'evam', class-id=60, method-id=20)
+	at com.rabbitmq.client.impl.ChannelN.asyncShutdown(ChannelN.java:504)
+	at com.rabbitmq.client.impl.ChannelN.processAsync(ChannelN.java:346)
+	at com.rabbitmq.client.impl.AMQChannel.handleCompleteInboundCommand(AMQChannel.java:178)
+	at com.rabbitmq.client.impl.AMQChannel.handleFrame(AMQChannel.java:111)
+	at com.rabbitmq.client.impl.AMQConnection.readFrame(AMQConnection.java:643)
+	at com.rabbitmq.client.impl.AMQConnection.access$300(AMQConnection.java:47)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:581)
+	... 1 more
+2018-02-25 21:27:37 INFO  ConsumerListener:40 - Queue listening started, wait...
+2018-02-25 21:27:42 INFO  ConsumerListener:45 - handleCancelOk 
+2018-02-25 21:27:42 INFO  ConsumerListener:53 - 0 messages
+2018-02-25 21:27:42 INFO  ConsumerListener:59 - Queue listening stoppped
+2018-02-25 21:33:26 INFO  ConsumerListener:40 - Queue listening started, wait...
+2018-02-25 21:33:26 DEBUG ConsumerListener:34 - delivery:1
+2018-02-25 21:33:26 DEBUG ConsumerListener:34 - delivery:2
+2018-02-25 21:33:26 DEBUG ConsumerListener:34 - delivery:3
+2018-02-25 21:33:26 DEBUG ConsumerListener:34 - delivery:4
+2018-02-25 21:33:26 DEBUG ConsumerListener:34 - delivery:5
+2018-02-25 21:33:26 DEBUG ConsumerListener:34 - delivery:6
+2018-02-25 21:33:26 DEBUG ConsumerListener:34 - delivery:7
+2018-02-25 21:33:26 DEBUG ConsumerListener:34 - delivery:8
+2018-02-25 21:33:26 DEBUG ConsumerListener:34 - delivery:9
+2018-02-25 21:33:26 DEBUG ConsumerListener:34 - delivery:10
+2018-02-25 21:33:31 INFO  ConsumerListener:45 - handleCancelOk 
+2018-02-25 21:33:34 INFO  Way4DocFileCreator:83 - createWay4File
+2018-02-25 21:33:34 INFO  Way4DocFileCreator:116 - file with name 4way4\IIC_Documents_0001000120182502_9999.xml and 10 records created
+2018-02-25 21:37:30 INFO  ConsumerListener:40 - Queue listening started, wait...
+2018-02-25 21:37:30 DEBUG ConsumerListener:34 - delivery:1
+2018-02-25 21:37:30 DEBUG ConsumerListener:34 - delivery:2
+2018-02-25 21:37:30 DEBUG ConsumerListener:34 - delivery:3
+2018-02-25 21:37:30 DEBUG ConsumerListener:34 - delivery:4
+2018-02-25 21:37:30 DEBUG ConsumerListener:34 - delivery:5
+2018-02-25 21:37:30 DEBUG ConsumerListener:34 - delivery:6
+2018-02-25 21:37:30 DEBUG ConsumerListener:34 - delivery:7
+2018-02-25 21:37:30 DEBUG ConsumerListener:34 - delivery:8
+2018-02-25 21:37:30 DEBUG ConsumerListener:34 - delivery:9
+2018-02-25 21:37:30 DEBUG ConsumerListener:34 - delivery:10
+2018-02-25 21:37:35 INFO  ConsumerListener:45 - handleCancelOk 
+2018-02-25 21:37:36 INFO  Way4DocFileCreator:83 - createWay4File
+2018-02-25 21:37:37 INFO  Way4DocFileCreator:116 - file with name 4way4\IIC_Documents_0001000120182502_9999.xml and 10 records created
+2018-02-25 21:37:37 DEBUG ConsumerListener:77 - Acknowledged 10 messages
+2018-02-25 21:37:37 INFO  ConsumerListener:59 - Queue listening stoppped
+2018-02-25 21:37:49 INFO  ConsumerListener:40 - Queue listening started, wait...

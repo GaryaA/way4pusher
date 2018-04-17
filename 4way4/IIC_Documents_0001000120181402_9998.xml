@@ -1,0 +1,46 @@
+<DocFile>
+<FileHeader>
+        <FileLabel>PAYMENT</FileLabel>
+        <FormatVersion>2.1</FormatVersion>
+        <Sender>PAY0001</Sender>
+        <CreationDate>2018-02-14</CreationDate>
+        <CreationTime>09:01:25</CreationTime>
+        <FileSeqNumber>2</FileSeqNumber>
+        <Receiver>9998</Receiver>
+    </FileHeader>
+<DocList>
+<Doc>
+            <TransType>
+                <TransCode>
+                    <MsgCode>PAYPER</MsgCode>
+                </TransCode>
+            </TransType>
+            <DocRefSet>
+                <Parm>
+                    <ParmCode>DRN</ParmCode>
+                    <Value></Value>
+                </Parm>
+            </DocRefSet>
+            <LocalDt>2017-09-14 16:30:00</LocalDt>
+            <Description>Бонусы</Description>
+            <SourceDtls></SourceDtls>
+            <Originator>
+                <ContractNumber>200-CLIENT_FEE_KZT_RES</ContractNumber>
+                <MemberId>PAY0001</MemberId>
+            </Originator>
+            <Destination>
+                <ContractNumber>KZ0000000000000000000</ContractNumber>
+                <MemberId>0001</MemberId>
+            </Destination>
+            <Transaction>
+                <Currency>398</Currency>
+                <Amount>3000</Amount>
+            </Transaction>
+        </Doc>
+</DocList><FileTrailer>
+        <CheckSum>
+            <RecsCount>1</RecsCount>
+            <HashTotalAmount>3000</HashTotalAmount>
+        </CheckSum>
+    </FileTrailer>
+</DocFile>
